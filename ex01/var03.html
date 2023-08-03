@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 2, 3, 4];
+        console.log(arr);
+        console.log(arr[0]);
+
+        //...arr -> 1,2,3,4 (흩뿌리기)
+        let arr2 = [100, ...arr, 9] //...은 전개연산자(스프레드연산자) ->[]로 다시 감싸면 배열
+        arr2[5] = 1; //배열 중간값 바꾸기
+        console.log(arr2);
+    </script>
+</body>
+
+</html>
