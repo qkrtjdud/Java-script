@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // let add = function add(n1, n2) { //1급 객체, 함수를 객체에 담을수 있다.             
+        //     return n1 + n2;
+        // }
+
+        // let add = function (n1, n2) {  /*익명함수*/ 
+        //     return n1 + n2;
+        // }
+
+        // let add =(n1,n2)=>{ /*람다 함수*/
+        //     return n1+n2;
+        // }
+
+        let add = (n1, n2) => n1 + n2;
+
+        let minus = (n1, n2) => console.log(n1 - n2); //리턴을 안해도 쓸수 있다. 그냥 실행되고 끝남!
+
+        let result = add(1, 2);
+        alert(result);
+    </script>
+</body>
+
+</html>
