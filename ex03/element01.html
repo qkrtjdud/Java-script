@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red-text {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>box1</div>
+    <div>box2</div>
+    <div class="red-text">box3</div>
+    <div class="red-text">box4</div>
+    <div id="box5">box5</div>
+    <hr>
+    <div id="err"></div>
+    <button onclick="tagChabge()">태그 찾기</button>
+    <button onclick="classChange()">클래스 찾기</button>
+    <button onclick="idChange()">아이디 찾기</button>
+    <button onclick="err()">에러</button>
+
+    <script>
+        function err() {
+            let errEl = document.querySelector("#err");
+            console.log(errEl);
+            errEl.innerHTML = "아이디 혹은 비밀번호를 잘못적음";
+        }
+
+        function tagChabge() {
+            let tagE1 = document.querySelectorAll("div");
+            console.log(tagE1);
+            tagE1[0].innerHTML = "<h3>내용변경</h3>";
+            tagE1[1].textContent = "<h1>내용변경</h1>";
+            tagE1[2].textContent = "내용변경";
+            tagE1[3].textContent = "내용변경";
+            tagE1[4].textContent = "내용변경";
+        }
+
+        function classChange() {
+            let classE1 = document.querySelectorAll(".red-text");
+            console.log(classE1);
+            classE1[0].textContent = "내용변경2";
+            classE1[1].textContent = "내용변경2";
+
+            for (let i = 0; i < classE1.length; i++) {
+                classE1[i].textContent = "내용";
+            }
+        }
+        function idChange() {
+            let idE1 = document.querySelector("#box5");
+            console.log(idE1);
+            idE1.textContent = "아이디";
+        }
+
+    </script>
+</body>
+
+</html>
